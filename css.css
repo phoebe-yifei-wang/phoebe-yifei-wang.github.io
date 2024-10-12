@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'freundschafts';
+    font-style: normal; 
+    src: url(./fonts/freundschafts-antiqua.woff);
+}
+
+@font-face {
+    font-family: 'freundschafts';
+    font-style: italic; 
+    src: url(./fonts/freundschafts-antiqua-kursiv.woff);
+}
+
+@font-face {
+    font-family: 'faune';
+    font-style: normal; 
+    font-weight: bold; 
+    src: url(./fonts/Faune-Text_Bold.woff);
+}
+
+ul, li, span, cite { 
+    margin: 0; 
+    padding: 0; 
+    line-height: 20px; 
+}
+
+article, 
+p, 
+h1, 
+h2, 
+h3, 
+h4, 
+ul, 
+ul li, 
+span, 
+cite, 
+date {
+    font-family: 'freundschafts', 'Georgia', 'Times New Roman', serif; 
+    font-size: 16px; 
+    font-weight: normal; 
+    line-height: 20px; 
+    font-variant-numeric: oldstyle-nums; 
+    margin: 0; 
+    padding: 0; 
+    -webkit-text-stroke: 0.5px; 
+}
+
+ul li {
+    list-style-type: none; 
+    padding-left: 1em; 
+    text-indent: -1em; 
+}
+
+article {
+    padding: 2px; 
+    max-width: 750px; 
+    margin: 0 auto; 
+    border: 5px solid #d00; 
+}
+
+article div {
+    border: 1px solid #d00; 
+}
+
+article div { 
+    padding: 10px; 
+}
+
+article div#name {
+    padding-top: 5px; 
+    padding-bottom: 8px;
+}
+
+article div#introduction { 
+    border-top: 0px; 
+}
+
+article div#cv {
+    border-top: 0px; 
+    padding-top: 10px; 
+}
+
+@media (min-width: 800px) {
+    p, h1, h2, h3, ul, ul li  {
+        font-size: 16px; 
+    }
+    article {
+        margin: 50px auto; 
+    }
+
+    article div { 
+        padding: 20px; 
+    }
+}
+
+a {
+    text-decoration: underline; 
+    color: black; 
+}
+
+span[lang="zh"] {
+    font-family: serif; 
+}
+
+/* Headings */ 
+article h1, 
+article h2 {
+    font-family: 'faune', sans-serif; 
+    font-size: 15px; 
+    -webkit-text-stroke: 0; 
+    font-weight: bold; 
+    font-style: normal; 
+}
+
+article h2 {
+    margin-top: 8px; 
+}
+
+/* Inline headings */ 
+h3 {
+    margin-right: 5px;
+    /* font-family: 'Faune Text'; 
+    font-size: 15.5px; 
+    -webkit-text-stroke: 0; 
+    position: relative; 
+    bottom: -0.5px; */ 
+}
+
+#education p, 
+#research-experience p, 
+#awards p, 
+#service p {
+    display: inline; 
+    margin-right: 5px; 
+}
+
+p.secondary { 
+    display: block !important; 
+    text-indent: 0; 
+}
