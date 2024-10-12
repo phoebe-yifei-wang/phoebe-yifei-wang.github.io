@@ -32,8 +32,7 @@ h4,
 ul, 
 ul li, 
 span, 
-cite, 
-date {
+cite {
     font-family: 'freundschafts', 'Georgia', 'Times New Roman', serif; 
     font-size: 16px; 
     font-weight: normal; 
@@ -41,11 +40,16 @@ date {
     font-variant-numeric: oldstyle-nums; 
     margin: 0; 
     padding: 0; 
-    -webkit-text-stroke: 0.5px; 
+    text-shadow: black -0.1px -0.1px 0; 
+
 }
 
 ul li {
     list-style-type: none; 
+
+}
+
+#publications ul li {
     padding-left: 1em; 
     text-indent: -1em; 
 }
@@ -106,7 +110,7 @@ article h1,
 article h2 {
     font-family: 'faune', sans-serif; 
     font-size: 15px; 
-    -webkit-text-stroke: 0; 
+    text-shadow: none; 
     font-weight: bold; 
     font-style: normal; 
 }
@@ -129,11 +133,14 @@ h3 {
 #research-experience p, 
 #awards p, 
 #service p {
-    display: inline; 
-    margin-right: 5px; 
+    padding-left: 1em; 
+}
+
+p span + span {
+    margin-left: 5px; 
 }
 
 p.secondary { 
     display: block !important; 
-    text-indent: 0; 
+    padding-left: 1em; 
 }
