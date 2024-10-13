@@ -44,6 +44,12 @@ cite {
 
 }
 
+abbr {
+    letter-spacing: 0.5px; 
+    font-size: 15px; 
+    text-shadow: black -0.15px -0.15px 0; 
+}
+
 ul li {
     list-style-type: none; 
 
