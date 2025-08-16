@@ -17,12 +17,8 @@
     src: url(./fonts/Faune-Text_Bold.woff);
 }
 
-ul, li, span, cite { 
-    margin: 0; 
-    padding: 0; 
-    line-height: 20px; 
-}
 
+/* Default styling ------------------------------------------ */ 
 article, 
 p, 
 h1, 
@@ -30,123 +26,139 @@ h2,
 h3, 
 h4, 
 ul, 
-ul li, 
+li, 
 span, 
 cite {
-    font-family: 'freundschafts', 'Georgia', 'Times New Roman', serif; 
-    font-size: 16px; 
+    font-family: 'Playfair', 'Georgia', 'Times New Roman', serif; 
+    font-optical-sizing: auto; 
+    font-size: 18px; 
     font-weight: normal; 
-    line-height: 20px; 
+    line-height: 1.3; 
     font-variant-numeric: oldstyle-nums; 
     margin: 0; 
     padding: 0; 
-    text-shadow: black -0.1px -0.1px 0; 
-
+    font-variation-settings: 'wdth' 100;
+    /* text-shadow: black -0.1px -0.1px 0; */ 
 }
 
+/* Abbreviations: style caps */ 
 abbr {
     letter-spacing: 0.5px; 
-    font-size: 15px; 
-    text-shadow: black -0.15px -0.15px 0; 
+    /* font-size: 15px; */ 
+    /* text-shadow: black -0.15px -0.15px 0; */ 
 }
 
+/* Remove list bullets */ 
 ul li {
     list-style-type: none; 
-
 }
 
-#publications ul li {
-    padding-left: 1em; 
-    text-indent: -1em; 
+/* Links */ 
+a {
+    text-decoration: underline; 
+    text-decoration-thickness: 1px; 
+    text-underline-offset: 1.5px; 
+    color: black; 
 }
 
+a:hover {
+    color: #d00; 
+}
+
+/* Chinese */ 
+span[lang="zh"] {
+    font-family: serif; 
+}
+
+/* Containers ---------------------------------------------- */ 
+/* Outer container */ 
 article {
-    padding: 2px; 
-    max-width: 750px; 
-    margin: 0 auto; 
-    border: 5px solid #d00; 
+    padding: 2px; /* Apply padding */ 
+    max-width: 800px; /* Set width */ 
+    margin: 0 auto; /* Center */ 
+    /* border: 5px solid #d00; /* Apply border */ 
 }
 
+/* Inner containers */ 
 article div {
-    border: 1px solid #d00; 
+    border: 1px solid #d00; /* Apply thin border */ 
+    padding: 10px; /* Set default padding */ 
 }
 
-article div { 
-    padding: 10px; 
-}
-
+/* Name container */ 
 article div#name {
+    /* Adjust padding */ 
     padding-top: 5px; 
-    padding-bottom: 8px;
+    padding-bottom: 8px; 
 }
 
+/* Bio container */ 
 article div#introduction { 
-    border-top: 0px; 
+    border-top: 0px; /* Remove repeated border */ 
 }
 
+/* CV container */ 
 article div#cv {
-    border-top: 0px; 
-    padding-top: 10px; 
+    border-top: 0px; /* Remove repeated border */ 
+    padding-top: 10px; /* Adjust padding */ 
 }
 
+/* Large screens */ 
 @media (min-width: 800px) {
-    p, h1, h2, h3, ul, ul li  {
-        font-size: 16px; 
-    }
+    /* Increase top and bottom margin */ 
     article {
         margin: 50px auto; 
     }
 
+    /* Increase internal padding */ 
     article div { 
         padding: 20px; 
     }
 }
 
-a {
-    text-decoration: underline; 
-    color: black; 
-}
-
-span[lang="zh"] {
-    font-family: serif; 
-}
-
+/* Headings ---------------------------------------------- */ 
 /* Headings */ 
 article h1, 
 article h2 {
     font-family: 'faune', sans-serif; 
-    font-size: 15px; 
+    font-size: 16px; 
     text-shadow: none; 
     font-weight: bold; 
     font-style: normal; 
 }
 
+/* Space before headings */ 
 article h2 {
     margin-top: 8px; 
 }
 
-/* Inline headings */ 
 h3 {
-    margin-right: 5px;
-    /* font-family: 'Faune Text'; 
-    font-size: 15.5px; 
-    -webkit-text-stroke: 0; 
-    position: relative; 
-    bottom: -0.5px; */ 
+    font-size: 22px; 
 }
 
+h3, h2 + p, h2 + ul {
+    margin-top: 8px; 
+    
+}
+
+/* Text -------------------------------------------------- */ 
+/* Publications: hanging indent */ 
+#publications ul li,
+#presentations ul li, 
+#teaching ul li {
+    padding-left: 1.5em; 
+    text-indent: -1.5em; 
+}
+
+/* Non-headings: indent */ 
 #education p, 
 #research-experience p, 
 #awards p, 
 #service p {
-    padding-left: 1em; 
+    /* padding-left: 1.5em; */ 
 }
 
+/* Add space between inline sections (before dates) */ 
 p span + span {
-    margin-left: 5px; 
-}
-
-p.secondary { 
-    display: block !important; 
-    padding-left: 1em; 
+    margin-left: 10px; 
 }
