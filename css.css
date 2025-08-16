@@ -76,7 +76,7 @@ article {
     padding: 2px; /* Apply padding */ 
     max-width: 800px; /* Set width */ 
     margin: 0 auto; /* Center */ 
-    /* border: 5px solid #d00; /* Apply border */ 
+    border: 5px solid #d00; /* Apply border */ 
 }
 
 /* Inner containers */ 
@@ -121,7 +121,7 @@ article div#cv {
 article h1, 
 article h2 {
     font-family: 'faune', sans-serif; 
-    font-size: 16px; 
+    font-size: 18px; 
     text-shadow: none; 
     font-weight: bold; 
     font-style: normal; 
@@ -133,7 +133,8 @@ article h2 {
 }
 
 h3 {
-    font-size: 22px; 
+    /* font-size: 20px;  */
+    font-weight: bold; 
 }
 
 h3, h2 + p, h2 + ul {
@@ -156,6 +157,10 @@ h3, h2 + p, h2 + ul {
 #awards p, 
 #service p {
     /* padding-left: 1.5em; */ 
+}
+
+.secondary {
+    padding-left: 1.5em; 
 }
 
 /* Add space between inline sections (before dates) */ 
